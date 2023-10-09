@@ -28,3 +28,5 @@ export const data = [
         quantity: 1,
     },
 ]
+
+export default data
