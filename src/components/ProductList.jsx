@@ -1,5 +1,5 @@
 import React from 'react';
-import {  } from "../data";
+import { data } from "../data";
 
 const ProductList = () => {
     return (
