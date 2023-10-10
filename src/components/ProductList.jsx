@@ -2,10 +2,10 @@ import React from "react";
 import data  from "../data";
 
     const ProductList = ({allProducts, setAllProducts}) => {
-const onAddProduct = () => {
-    console.log("add");
+const onAddProduct = product =>  {
+        setAllProducts([...allProducts, product]);
 };
-
+console.log(allProducts)
     return (
         <div className='container-items'> 
         {data.map(product => (
@@ -16,7 +16,7 @@ const onAddProduct = () => {
                 <div className='info-product'>
                     <h2>{product.nameProduct}</h2>
                     <p className="price">${product.price}</p>
-                    <button onClick={() => onAddProduct()}>Añadir al carrito</button>
+                    <button onClick={() => onAddProduct(product)}>Añadir al carrito</button>
                 </div>
             </div>
             ))}        
